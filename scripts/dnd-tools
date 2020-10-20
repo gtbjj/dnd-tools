@@ -3235,7 +3235,7 @@ def modifiers_fn():
     print("The proficiency bonus for Lvl 1 characters is 2")
     print("Your class is: ", char_class)
     print("Calculating attack bonus...")
-    if char_class is "Barbarian":
+    if char_class == "Barbarian":
         prim_stat = "Strength"
     elif char_class in ("Bard", "Sorcerer", "Warlock"):
         prim_stat = "Charisma"
@@ -3823,7 +3823,7 @@ def skills_fn():
 def hp_fn():
     global char_hp
     print("Now we need to calculate hit points.")
-    if char_class is "Barbarian":
+    if char_class == "Barbarian":
         hit_die = random.randint(1, 12)
         char_hp = mod_con + hit_die
         print("You scored ", char_hp, " hit points")
